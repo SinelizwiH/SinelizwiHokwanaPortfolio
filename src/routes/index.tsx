@@ -80,7 +80,7 @@ function Portfolio() {
 function Nav() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-background/70 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-primary/15 bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <a href="#home" className="font-display text-lg font-bold tracking-tight">
           <span className="text-gradient">Sinelizwi.</span>
@@ -114,14 +114,14 @@ function Nav() {
         </div>
       </div>
       {open && (
-        <div className="border-t border-white/5 bg-background/95 md:hidden">
+        <div className="border-t border-primary/15 bg-background/95 md:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-6 py-4">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-2 py-2 text-sm text-muted-foreground hover:bg-white/5 hover:text-foreground"
+                className="rounded-md px-2 py-2 text-sm text-muted-foreground hover:bg-primary/5 hover:text-foreground"
               >
                 {item.label}
               </a>
@@ -145,7 +145,7 @@ function Hero() {
     <section id="home" className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[1.3fr_1fr]">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-muted-foreground">
+          <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs text-muted-foreground">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
@@ -170,7 +170,7 @@ function Hero() {
             </a>
             <a
               href="#certificates"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-white/10"
+              className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/5 px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-primary/10"
             >
               View My Certificates
             </a>
@@ -185,7 +185,7 @@ function Hero() {
         <div className="relative mx-auto lg:mx-0">
           <div className="relative">
             <div className="absolute -inset-6 rounded-full bg-gradient-to-tr from-primary/30 via-cyan/20 to-purple/30 blur-3xl" />
-            <div className="relative aspect-square w-64 overflow-hidden rounded-full border border-white/10 glow-ring md:w-80 lg:w-96">
+            <div className="relative aspect-square w-64 overflow-hidden rounded-full border border-primary/20 glow-ring md:w-80 lg:w-96">
               {profile.profileImage ? (
                 <img src={profile.profileImage} alt={profile.name} className="h-full w-full object-cover" />
               ) : (
@@ -220,7 +220,7 @@ function SocialIcon({ href, label, children }: { href: string; label: string; ch
       aria-label={label}
       target="_blank"
       rel="noreferrer"
-      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-muted-foreground transition hover:border-primary/50 hover:bg-primary/10 hover:text-foreground"
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/20 bg-primary/5 text-muted-foreground transition hover:border-primary/50 hover:bg-primary/10 hover:text-foreground"
     >
       {children}
     </a>
@@ -295,7 +295,7 @@ function Skills() {
                   {items.map((s) => (
                     <span
                       key={s}
-                      className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-muted-foreground transition group-hover:border-primary/20 group-hover:text-foreground"
+                      className="rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs text-muted-foreground transition group-hover:border-primary/20 group-hover:text-foreground"
                     >
                       {s}
                     </span>
@@ -348,17 +348,17 @@ function Projects() {
               )}
               <div className="mt-5 flex flex-wrap gap-1.5">
                 {p.technologies.map((t) => (
-                  <span key={t} className="rounded-md border border-white/10 bg-white/[0.03] px-2 py-0.5 text-[11px] text-muted-foreground">
+                  <span key={t} className="rounded-md border border-primary/20 bg-primary/5 px-2 py-0.5 text-[11px] text-muted-foreground">
                     {t}
                   </span>
                 ))}
               </div>
-              <div className="mt-6 flex items-center justify-between border-t border-white/5 pt-4">
+              <div className="mt-6 flex items-center justify-between border-t border-primary/15 pt-4">
                 <span className="text-xs text-muted-foreground">Role · {p.role}</span>
                 <div className="flex gap-2">
                   {p.github && (
                     <a href={p.github} target="_blank" rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs transition hover:border-primary/40 hover:text-foreground">
+                      className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs transition hover:border-primary/40 hover:text-foreground">
                       <Github className="h-3.5 w-3.5" /> GitHub
                     </a>
                   )}
@@ -492,7 +492,7 @@ function CareerGoals() {
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {roles.map((r) => (
-                <span key={r} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-muted-foreground">
+                <span key={r} className="rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs text-muted-foreground">
                   {r}
                 </span>
               ))}
@@ -531,14 +531,14 @@ function Contact() {
           >
             <div className="grid gap-4 md:grid-cols-2">
               <Field label="Name">
-                <input required type="text" className="w-full rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-sm outline-none focus:border-primary/50" />
+                <input required type="text" className="w-full rounded-lg border border-primary/20 bg-primary/5 px-3 py-2 text-sm outline-none focus:border-primary/50" />
               </Field>
               <Field label="Email">
-                <input required type="email" className="w-full rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-sm outline-none focus:border-primary/50" />
+                <input required type="email" className="w-full rounded-lg border border-primary/20 bg-primary/5 px-3 py-2 text-sm outline-none focus:border-primary/50" />
               </Field>
             </div>
             <Field label="Message">
-              <textarea required rows={5} className="w-full resize-none rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-sm outline-none focus:border-primary/50" />
+              <textarea required rows={5} className="w-full resize-none rounded-lg border border-primary/20 bg-primary/5 px-3 py-2 text-sm outline-none focus:border-primary/50" />
             </Field>
             <button
               type="submit"
@@ -589,7 +589,7 @@ function ContactLink({ href, icon, label, value }: { href: string; icon: React.R
 
 function Footer() {
   return (
-    <footer className="border-t border-white/5 py-10">
+    <footer className="border-t border-primary/15 py-10">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-xs text-muted-foreground md:flex-row">
         <div>© {new Date().getFullYear()} {profile.name}. Crafted with care.</div>
         <div className="flex items-center gap-4">
