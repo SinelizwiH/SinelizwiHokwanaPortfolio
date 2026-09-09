@@ -134,7 +134,7 @@ export const certificates: Certificate[] = [
   {
     name: "Introduction to AI and Generative AI",
     issuer: "Google — Coursera",
-    date: "2025",
+    date: "2026",
     description: "Foundations of artificial intelligence and generative AI concepts.",
     url: "#",
     featured: true,
@@ -142,7 +142,7 @@ export const certificates: Certificate[] = [
   {
     name: "Maximize Productivity with AI Tools",
     issuer: "Google — Coursera",
-    date: "2025",
+    date: "2026",
     description: "Applying AI tools to boost personal and workplace productivity.",
     url: "#",
     featured: true,
@@ -150,7 +150,7 @@ export const certificates: Certificate[] = [
   {
     name: "Discover the Art of Prompt Engineering",
     issuer: "Google — Coursera",
-    date: "2025",
+    date: "2026",
     description: "Crafting effective prompts for high-quality AI outputs.",
     url: "#",
     featured: true,
@@ -158,7 +158,7 @@ export const certificates: Certificate[] = [
   {
     name: "Use AI Responsibly",
     issuer: "Google — Coursera",
-    date: "2025",
+    date: "2026",
     description: "Understanding responsible, ethical and safe use of AI.",
     url: "#",
     featured: true,
@@ -166,7 +166,7 @@ export const certificates: Certificate[] = [
   {
     name: "Stay Ahead of the AI Curve",
     issuer: "Google — Coursera",
-    date: "2025",
+    date: "2026",
     description: "Continuous learning strategies to keep pace with AI advancements.",
     url: "#",
     featured: true,
@@ -174,7 +174,7 @@ export const certificates: Certificate[] = [
   {
     name: "Google AI Essentials Capstone",
     issuer: "Google — Coursera",
-    date: "2025",
+    date: "2026",
     description: "Applying AI Essentials skills to real workplace scenarios.",
     url: "#",
     featured: true,
