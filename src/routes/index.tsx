@@ -4,7 +4,6 @@ import {
   Github,
   Linkedin,
   Mail,
-  Download,
   ExternalLink,
   Code2,
   Database,
@@ -16,7 +15,6 @@ import {
   GraduationCap,
   Menu,
   X,
-  Send,
 } from "lucide-react";
 import {
   profile,
@@ -70,7 +68,6 @@ function Portfolio() {
         <Certificates />
         <Approach />
         <CareerGoals />
-        <Contact />
       </main>
       <Footer />
     </div>
@@ -97,13 +94,6 @@ function Nav() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <a
-            href={links.cv}
-            download
-            className="hidden items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90 md:inline-flex"
-          >
-            <Download className="h-4 w-4" /> Download CV
-          </a>
           <button
             className="rounded-md p-2 md:hidden"
             onClick={() => setOpen((v) => !v)}
@@ -126,13 +116,6 @@ function Nav() {
                 {item.label}
               </a>
             ))}
-            <a
-              href={links.cv}
-              download
-              className="mt-2 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
-            >
-              <Download className="h-4 w-4" /> Download CV
-            </a>
           </nav>
         </div>
       )}
@@ -150,7 +133,7 @@ function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
-            Available for graduate & junior opportunities
+            Available for immediate employment
           </div>
           <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
             Building Digital Solutions with{" "}
@@ -245,16 +228,16 @@ function About() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           <div className="glass-card rounded-2xl p-6 md:col-span-2">
             <p className="leading-relaxed text-muted-foreground">
-              Sinelizwi Hokwana is a Business Information Technology graduate from the{" "}
+              I am a Business Information Technology graduate from the{" "}
               <span className="text-foreground">University of Johannesburg</span>, with a focus on Software Development.
-              She has developed experience through academic and personal projects involving web development,
+              I have developed experience through academic and personal projects involving web development,
               mobile application development, databases, cloud technologies, APIs and business analysis.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              She enjoys understanding real-world problems and transforming them into practical digital solutions.
-              She is also interested in Artificial Intelligence and recently completed{" "}
+              I enjoy understanding real-world problems and transforming them into practical digital solutions.
+              I am also interested in Artificial Intelligence and recently completed{" "}
               <span className="text-foreground">six Google AI Essentials certificates</span> through Coursera,
-              demonstrating her commitment to continuously learning and understanding how AI can be applied
+              demonstrating my commitment to continuously learning and understanding how AI can be applied
               responsibly and effectively in modern workplaces and technology solutions.
             </p>
           </div>
@@ -432,14 +415,6 @@ function CertificateCard({ c }: { c: (typeof certificates)[number] }) {
       <h4 className="mt-4 font-display text-base font-semibold leading-tight">{c.name}</h4>
       <p className="mt-1 text-xs text-muted-foreground">{c.issuer}</p>
       <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{c.description}</p>
-      <a
-        href={c.url}
-        target="_blank"
-        rel="noreferrer"
-        className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-primary transition group-hover:gap-2.5"
-      >
-        View Certificate <ArrowRight className="h-3.5 w-3.5" />
-      </a>
     </div>
   );
 }
@@ -501,89 +476,6 @@ function CareerGoals() {
         </div>
       </div>
     </section>
-  );
-}
-
-function Contact() {
-  const [sent, setSent] = useState(false);
-  return (
-    <section id="contact" className="py-24">
-      <div className="mx-auto max-w-6xl px-6">
-        <SectionHeader
-          eyebrow="Contact"
-          title="Let's build something meaningful."
-          description="Reach out about opportunities, collaborations or just to say hello."
-        />
-        <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_1.2fr]">
-          <div className="space-y-3">
-            <ContactLink href={`mailto:${links.email}`} icon={<Mail className="h-4 w-4" />} label="Email" value={links.email} />
-            <ContactLink href={links.github} icon={<Github className="h-4 w-4" />} label="GitHub" value="View profile" />
-            <ContactLink href={links.linkedin} icon={<Linkedin className="h-4 w-4" />} label="LinkedIn" value="Connect with me" />
-            <ContactLink href={links.cv} icon={<Download className="h-4 w-4" />} label="Curriculum Vitae" value="Download CV" />
-          </div>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-              // TODO: Connect to an email service (e.g. Resend, Formspree, EmailJS) or a server function.
-            }}
-            className="glass-card space-y-4 rounded-2xl p-6"
-          >
-            <div className="grid gap-4 md:grid-cols-2">
-              <Field label="Name">
-                <input required type="text" className="w-full rounded-lg border border-primary/20 bg-primary/5 px-3 py-2 text-sm outline-none focus:border-primary/50" />
-              </Field>
-              <Field label="Email">
-                <input required type="email" className="w-full rounded-lg border border-primary/20 bg-primary/5 px-3 py-2 text-sm outline-none focus:border-primary/50" />
-              </Field>
-            </div>
-            <Field label="Message">
-              <textarea required rows={5} className="w-full resize-none rounded-lg border border-primary/20 bg-primary/5 px-3 py-2 text-sm outline-none focus:border-primary/50" />
-            </Field>
-            <button
-              type="submit"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
-            >
-              <Send className="h-4 w-4" /> {sent ? "Message ready — configure email service" : "Send Message"}
-            </button>
-            {sent && (
-              <p className="text-xs text-muted-foreground">
-                Front-end form submitted. Connect this to an email service (e.g. Resend, Formspree or a server function) to deliver messages.
-              </p>
-            )}
-          </form>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
-  return (
-    <label className="block">
-      <span className="mb-1.5 block text-xs font-medium uppercase tracking-widest text-muted-foreground">{label}</span>
-      {children}
-    </label>
-  );
-}
-
-function ContactLink({ href, icon, label, value }: { href: string; icon: React.ReactNode; label: string; value: string }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className="glass-card group flex items-center justify-between rounded-xl p-4 transition hover:border-primary/40"
-    >
-      <div className="flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">{icon}</div>
-        <div>
-          <div className="text-xs uppercase tracking-widest text-muted-foreground">{label}</div>
-          <div className="text-sm font-medium">{value}</div>
-        </div>
-      </div>
-      <ArrowRight className="h-4 w-4 text-muted-foreground transition group-hover:translate-x-0.5 group-hover:text-foreground" />
-    </a>
   );
 }
 

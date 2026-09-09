@@ -119,34 +119,6 @@ export const projects: Project[] = [
     highlight: "Web development, form handling, backend integration, user-focused design.",
     github: "#",
   },
-  {
-    name: "Mzansi Travel Guide",
-    description:
-      "A mobile application concept designed to help users explore South African travel destinations and celebrate local tourism.",
-    technologies: ["React Native"],
-    role: "Mobile Developer",
-    highlight: "Mobile development, UX design, and local-first digital solutions.",
-    github: "#",
-  },
-  {
-    name: "Food Delivery Mobile App",
-    description:
-      "A React Native food delivery application featuring menu browsing, cart functionality, user profiles and multi-step forms.",
-    features: ["Menu browsing", "Cart functionality", "User profiles", "Multi-step forms", "Context API state"],
-    technologies: ["React Native", "Context API", "JavaScript"],
-    role: "Mobile Developer",
-    highlight: "Mobile application development and state management.",
-    github: "#",
-  },
-  {
-    name: "Flashcard Application",
-    description:
-      "A learning-focused application using Firebase Firestore for storing and managing flashcards with full CRUD functionality.",
-    technologies: ["React", "Firebase Firestore"],
-    role: "Developer",
-    highlight: "Firebase integration, cloud data storage, CRUD, educational technology.",
-    github: "#",
-  },
 ];
 
 export type Certificate = {
@@ -162,7 +134,7 @@ export const certificates: Certificate[] = [
   {
     name: "Introduction to AI and Generative AI",
     issuer: "Google — Coursera",
-    date: "2025",
+    date: "2026",
     description: "Foundations of artificial intelligence and generative AI concepts.",
     url: "#",
     featured: true,
@@ -170,7 +142,7 @@ export const certificates: Certificate[] = [
   {
     name: "Maximize Productivity with AI Tools",
     issuer: "Google — Coursera",
-    date: "2025",
+    date: "2026",
     description: "Applying AI tools to boost personal and workplace productivity.",
     url: "#",
     featured: true,
@@ -178,7 +150,7 @@ export const certificates: Certificate[] = [
   {
     name: "Discover the Art of Prompt Engineering",
     issuer: "Google — Coursera",
-    date: "2025",
+    date: "2026",
     description: "Crafting effective prompts for high-quality AI outputs.",
     url: "#",
     featured: true,
@@ -186,7 +158,7 @@ export const certificates: Certificate[] = [
   {
     name: "Use AI Responsibly",
     issuer: "Google — Coursera",
-    date: "2025",
+    date: "2026",
     description: "Understanding responsible, ethical and safe use of AI.",
     url: "#",
     featured: true,
@@ -194,7 +166,7 @@ export const certificates: Certificate[] = [
   {
     name: "Stay Ahead of the AI Curve",
     issuer: "Google — Coursera",
-    date: "2025",
+    date: "2026",
     description: "Continuous learning strategies to keep pace with AI advancements.",
     url: "#",
     featured: true,
@@ -202,7 +174,7 @@ export const certificates: Certificate[] = [
   {
     name: "Google AI Essentials Capstone",
     issuer: "Google — Coursera",
-    date: "2025",
+    date: "2026",
     description: "Applying AI Essentials skills to real workplace scenarios.",
     url: "#",
     featured: true,
@@ -224,5 +196,4 @@ export const navItems = [
   { label: "Projects", href: "#projects" },
   { label: "Certificates", href: "#certificates" },
   { label: "Experience", href: "#approach" },
-  { label: "Contact", href: "#contact" },
 ];
