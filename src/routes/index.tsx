@@ -228,16 +228,16 @@ function About() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           <div className="glass-card rounded-2xl p-6 md:col-span-2">
             <p className="leading-relaxed text-muted-foreground">
-              Sinelizwi Hokwana is a Business Information Technology graduate from the{" "}
+              I am a Business Information Technology graduate from the{" "}
               <span className="text-foreground">University of Johannesburg</span>, with a focus on Software Development.
-              She has developed experience through academic and personal projects involving web development,
+              I have developed experience through academic and personal projects involving web development,
               mobile application development, databases, cloud technologies, APIs and business analysis.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              She enjoys understanding real-world problems and transforming them into practical digital solutions.
-              She is also interested in Artificial Intelligence and recently completed{" "}
+              I enjoy understanding real-world problems and transforming them into practical digital solutions.
+              I am also interested in Artificial Intelligence and recently completed{" "}
               <span className="text-foreground">six Google AI Essentials certificates</span> through Coursera,
-              demonstrating her commitment to continuously learning and understanding how AI can be applied
+              demonstrating my commitment to continuously learning and understanding how AI can be applied
               responsibly and effectively in modern workplaces and technology solutions.
             </p>
           </div>
@@ -415,14 +415,6 @@ function CertificateCard({ c }: { c: (typeof certificates)[number] }) {
       <h4 className="mt-4 font-display text-base font-semibold leading-tight">{c.name}</h4>
       <p className="mt-1 text-xs text-muted-foreground">{c.issuer}</p>
       <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{c.description}</p>
-      <a
-        href={c.url}
-        target="_blank"
-        rel="noreferrer"
-        className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-primary transition group-hover:gap-2.5"
-      >
-        View Certificate <ArrowRight className="h-3.5 w-3.5" />
-      </a>
     </div>
   );
 }
