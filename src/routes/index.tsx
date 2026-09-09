@@ -4,7 +4,6 @@ import {
   Github,
   Linkedin,
   Mail,
-  Download,
   ExternalLink,
   Code2,
   Database,
@@ -16,7 +15,6 @@ import {
   GraduationCap,
   Menu,
   X,
-  Send,
 } from "lucide-react";
 import {
   profile,
@@ -70,7 +68,6 @@ function Portfolio() {
         <Certificates />
         <Approach />
         <CareerGoals />
-        <Contact />
       </main>
       <Footer />
     </div>
@@ -97,13 +94,6 @@ function Nav() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <a
-            href={links.cv}
-            download
-            className="hidden items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90 md:inline-flex"
-          >
-            <Download className="h-4 w-4" /> Download CV
-          </a>
           <button
             className="rounded-md p-2 md:hidden"
             onClick={() => setOpen((v) => !v)}
@@ -126,13 +116,6 @@ function Nav() {
                 {item.label}
               </a>
             ))}
-            <a
-              href={links.cv}
-              download
-              className="mt-2 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
-            >
-              <Download className="h-4 w-4" /> Download CV
-            </a>
           </nav>
         </div>
       )}
@@ -150,7 +133,7 @@ function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
-            Available for graduate & junior opportunities
+            Available for immediate employment
           </div>
           <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
             Building Digital Solutions with{" "}
